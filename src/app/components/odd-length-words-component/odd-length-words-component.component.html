@@ -1,0 +1,25 @@
+
+    <div class="">
+        @if (oddOrEven) {
+            <span class="text-danger text-wrap">{{userInput}}</span>
+        }
+    </div>
+
+    <div>
+        <table class="table">
+            <tbody>
+                @if (array.length) {
+                    @for (row of array; track row) {
+                        <tr>
+                            {{row}}
+                        </tr>
+                    }
+                }@else {
+                    <span>No odd length words</span>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    
+

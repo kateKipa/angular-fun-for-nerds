@@ -1,0 +1,21 @@
+<div class="d-lg-flex w-100 my-4 input-group ">
+    <input class="form-control rounded-3" type="text" [(ngModel)]="userInput" (input)="onUserInput($event)">
+    <button class="btn btn-outline-primary ms-4 rounded-3 btn-lg d-none d-lg-block " type="submit" type="submit" (click)="addWord()">Submit</button>
+    <button class="btn btn-outline-primary ms-4 rounded-3 btn-sm d-lg-none" type="submit" (click)="addWord()">Submit</button>
+</div>
+
+
+<div class="d-flex w-100 my-4">
+    
+        <div class="col-6 text-start ">
+          <app-odd-length-words-component [userInput]="userInput" [oddOrEven]="oddOrEven" [array]="dataOdd"></app-odd-length-words-component>
+        </div>
+        
+        <div class="col-6 text-end">
+          <app-even-length-words-component [userInput]="userInput" [oddOrEven]="oddOrEven" [array]="dataEven"></app-even-length-words-component>
+        </div>
+
+</div>
+
+
+  
